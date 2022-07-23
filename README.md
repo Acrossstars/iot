@@ -1,0 +1,1 @@
+pio pkg install --library "arduino-libraries/Mouse@^1.0.1"
