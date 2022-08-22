@@ -11,6 +11,7 @@ void setup()
 }
 
 int time = 0;
+int del = 5000;
 void loop()
 {
   delay(1000);
@@ -55,8 +56,13 @@ void loop()
       Keyboard.releaseAll(); // This is important after every Keyboard.press it will continue to be pressed
     }
 
-    delay(5000);
-    // delay(3500);
+    if(voltage > 4)
+    {
+      int rand = random(2500, 5000);
 
+      delay(rand);
+    }
+    else
+      delay(del);
   }
 }
